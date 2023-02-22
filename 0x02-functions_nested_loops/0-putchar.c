@@ -1,12 +1,14 @@
 #include "main.h"
+
 	/**
-	 * main - print _putchar
+	 * main - verifies the code
 	 * Return: 0
 	 */
 
 
 	int main(void)
 	{
+	char _putchar (char c);
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');
