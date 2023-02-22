@@ -4,6 +4,10 @@
 	 * Return: 0
 	 */
 	int main(void)
+	/**
+	 * main - verifies the code
+	 * Return: 0
+	 */
 	{
 	_putchar('_');
 	_putchar('p');
