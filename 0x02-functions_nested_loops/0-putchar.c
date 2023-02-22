@@ -1,5 +1,5 @@
 #include "main.h"
-/** 
+/**
  * main - verifies the code
  * Return: 0
  */
