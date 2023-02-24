@@ -1,20 +1,14 @@
-#include "main.h"
-/**
-* _isupper - this checks for uppercase character
-* @c: Variable dependent text
-* Return: This will always 0
-*/
-int _isupper(int c)
-{
-
-
- if (c >= 'A' && c <= 'Z')
- {
- return (1);
+#include "main.h" 
+ /** 
+  * _isdigit - function that checks for a digit (0 through 9) 
+  * @c: input 
+  * Return: 1 if c is a digit, 0 otherwise 
+  */ 
+ int _isdigit(int c) 
+ { 
+  
+ if ((c >= 48) && (c <= 57)) 
+ return (1); 
+ else 
+ return (0); 
  }
- else
-{
- return (0);
-}
-
-}
