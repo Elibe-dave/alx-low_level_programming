@@ -22,7 +22,7 @@ return (-1);
  * and perform a bitwise AND operation with 1
  */
 bit_value = (num >> index) & 1;
-/* 
+/*
  * return the bit value at the specified index
  */
 return (bit_value);
