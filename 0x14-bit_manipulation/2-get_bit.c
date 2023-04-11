@@ -1,42 +1,29 @@
 #include "main.h"
 
 /**
- * get_bit - gets the value of the bit at a specific index
- * @num: the decimal number to search
- * @index: the index of the bit to retrieve
+ * get_bit - returns the value of a bit at a specified index
+ * @num: unsigned long int to search
+ * @index: index of the bit to return (0-indexed)
  *
- * Return: the value of the bit at the given index
- * or -1 if the index is invalid
+ * Return: value of the bit (0 or 1), or -1 if index is out of range
  */
 int get_bit(unsigned long int num, unsigned int index)
 {
-/* Check if index is out of range */
-if (index >= sizeof(num) * 8)
-{
+int bit_value;
+
+/*
+ * check if index is out of range
+ */
+if (index > 63)
 return (-1);
-}
 
 /*
- * Right-shift the number to get the desired bit
- * to the least-significant position
- * then mask off all other bits
+ * shift the number to the right by the index
+ * and perform a bitwise AND operation with 1
  */
-unsigned long int mask = 1UL << index;
-unsigned long int masked_num = num & mask;
-
-/*
- * If the masked number is 0
- * the desired bit was a 0
- * otherwise, it was a 1
+bit_value = (num >> index) & 1;
+/* 
+ * return the bit value at the specified index
  */
-
-if (masked_num == 0)
-{
-return (0);
+return (bit_value);
 }
-else
-{
-return (1);
-}
-}
-
