@@ -1,19 +1,23 @@
-#include "main.h"
-
 /**
- * clear_bit - sets the value of a given bit to 0
- * @n: pointer to the number to modify
- * @index: index of the bit to clear (0-indexed from right)
- * Return: 1 if successful, or -1 if an error occurred
+ * binary_to_uint - converts a binary number string to unsigned integer
+ * @binary_str: string containing the binary number
+ * Return: the converted unsigned integer
  **/
-int clear_bit(unsigned long int *n, unsigned int index)
+unsigned int binary_to_uint(const char *binary_str)
 {
-if (index > 63)
-/*
- * check if the bit index is within the range of unsigned long int
- **/
-return (-1);
+int i;
+unsigned int decimal_val = 0;
 
-*n = (~(1UL << index) & *n);
-return (1);
+if (!binary_str)
+return (0);
+
+for (i = 0; binary_str[i]; i++)
+{
+if (binary_str[i] < '0' || binary_str[i] > '1')
+return (0);
+decimal_val = 2 * decimal_val + (binary_str[i] - '0');
+}
+
+return (decimal_val);
+}
 }
