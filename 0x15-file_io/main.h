@@ -24,7 +24,8 @@
  * @return: 0 on success, -1 on error.
  *
  *
- * append_text_to_file - Appends the specified text content to an existing file.
+ * append_text_to_file - Appends the specified text
+ * content to an existing file.
  *
  * @param filename: The name of the file to append to.
  * @param text_content: The text content to append.
