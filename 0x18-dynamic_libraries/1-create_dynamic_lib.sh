@@ -1,7 +1,4 @@
 #!/bin/bash
-# Compile all .c files into object files
-gcc -c -fPIC *.c
-# Create the shared library by linking object files
+gcc -c -fpic *.c
 gcc -shared -o liball.so *.o
-# Clean up by removing object files
-rm *.o
+export LD_LIBRARY_PATH= $LD_LIBRARY_PATH
